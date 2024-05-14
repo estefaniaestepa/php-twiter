@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Twitter Clone - Final</title>
     <link rel="stylesheet" href="styles.css" />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
@@ -69,27 +72,27 @@
 
       <!-- tweetbox starts -->
       <div class="tweetBox">
-        <form>
+        <form action="index.php" method="post">
           <div class="tweetbox__input">
             <img
               src="https://i.pinimg.com/originals/a6/58/32/a65832155622ac173337874f02b218fb.png"
               alt=""
             />
-            <input type="text" placeholder="What's happening?" />
+            <input type="text" name="tweet" placeholder="What's happening?" />
           </div>
           <button class="tweetBox__tweetButton">Tweet</button>
         </form>
       </div>
       <!-- tweetbox ends -->
 
-
       <?php
         foreach ($jsonArray["tweets"] as $tweet){
 
-        ?>  
-        
+        ?>
+
       <!-- post starts -->
-      <div class="post"> <!-- es el div que pinta un twit -->
+      <div class="post">
+        <!-- es el div que pinta un twit -->
         <div class="post__avatar">
           <img
             src="https://i.pinimg.com/originals/a6/58/32/a65832155622ac173337874f02b218fb.png"
@@ -103,7 +106,8 @@
               <h3>
                 <?php echo $tweet["autor"]; ?>
                 <span class="post__headerSpecial"
-                  ><span class="material-icons post__badge"> verified </span><?php echo $tweet["user"]; ?></span
+                  ><span class="material-icons post__badge"> verified </span
+                  ><?php echo $tweet["user"]; ?></span
                 >
               </h3>
             </div>
@@ -123,7 +127,7 @@
         </div>
       </div>
       <!-- post ends -->
-    <?php } ?>
+      <?php } ?>
       <!-- post starts -->
       <div class="post">
         <div class="post__avatar">
@@ -139,7 +143,8 @@
               <h3>
                 Somanath Goudar
                 <span class="post__headerSpecial"
-                  ><span class="material-icons post__badge"> verified </span>@somanathg</span
+                  ><span class="material-icons post__badge"> verified </span
+                  >@somanathg</span
                 >
               </h3>
             </div>
@@ -174,21 +179,30 @@
         <blockquote class="twitter-tweet">
           <p lang="en" dir="ltr">
             Sunsets don&#39;t get much better than this one over
-            <a href="https://twitter.com/GrandTetonNPS?ref_src=twsrc%5Etfw">@GrandTetonNPS</a>.
-            <a href="https://twitter.com/hashtag/nature?src=hash&amp;ref_src=twsrc%5Etfw"
+            <a href="https://twitter.com/GrandTetonNPS?ref_src=twsrc%5Etfw"
+              >@GrandTetonNPS</a
+            >.
+            <a
+              href="https://twitter.com/hashtag/nature?src=hash&amp;ref_src=twsrc%5Etfw"
               >#nature</a
             >
-            <a href="https://twitter.com/hashtag/sunset?src=hash&amp;ref_src=twsrc%5Etfw"
+            <a
+              href="https://twitter.com/hashtag/sunset?src=hash&amp;ref_src=twsrc%5Etfw"
               >#sunset</a
             >
             <a href="http://t.co/YuKy2rcjyU">pic.twitter.com/YuKy2rcjyU</a>
           </p>
           &mdash; US Department of the Interior (@Interior)
-          <a href="https://twitter.com/Interior/status/463440424141459456?ref_src=twsrc%5Etfw"
+          <a
+            href="https://twitter.com/Interior/status/463440424141459456?ref_src=twsrc%5Etfw"
             >May 5, 2014</a
           >
         </blockquote>
-        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <script
+          async
+          src="https://platform.twitter.com/widgets.js"
+          charset="utf-8"
+        ></script>
       </div>
     </div>
     <!-- widgets ends -->
